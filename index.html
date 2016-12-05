@@ -1,33 +1,161 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<title>Marcela Bomfim | Desenvolvedora Web</title>
-		<link rel="stylesheet" href="css/style.css">
 		<link rel="icon" href="favicon.png">
+		<meta name="author" content="Marcela Bomfim" />
+		<meta name="description" content="Meu portfolio" />
+		<meta name="keywords"  content="portfolio, programadora, desenvolvedora, web, frontend, php" />
+		<meta name="Resource-type" content="Document" />
+
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+		<link rel="stylesheet" href="css/style.css">
+
 	</head>
 	<body>
-		<div id="wrapper">
-			<section class="container">
-				<article class="card">
-					<header class="header">
-						<span class="avatar"><img src="images/marcela-bomfim.jpg" alt="Marcela Bomfim"></span>
-						<h1>Marcela Bomfim</h1>
-						<h2>Desenvolvedora Web - Frontend & PHP</h2>
-					</header>
-					<footer class="footer">
-						<ul class="social-icons">
-							<li><a href="mailto:mbomfim@live.com" class="email" target="_blank">Email</a></li>
-							<li><a href="skype:mbomfim.vr?userinfo" class="skype" target="_blank">Skype</a></li>
-							<li><a href="https://www.linkedin.com/in/marcelabomfim" class="linkedin" target="_blank">Linkedin</a></li>
+		<div id="fullpage">
+			<section class="section home">
+				<div class="container">
+					<img class="avatar" src="images/marcela-bomfim.jpg" alt="Marcela Bomfim">
+					<div class="hello">Hello World</div>
+					<h1>Eu sou a <span>Marcela Bomfim</span></h1>
+					<h2>Desenvolvedora Web - Frontend & PHP</h2>
+				</div>
+				<a class="anchor down" href="#About">Sobre mim</a>
+			</section>
+			<section class="section">
+				<div class="slide active about" data-anchor="Me">
+					<div class="container">
+						<div class="photo">
+							<img src="images/marcela-bomfim-photo.jpg" alt="Marcela Bomfim">
+						</div>
+						<h3>Sobre mim</h3>
+						<p>Sou uma Desenvolvedora Web atuando no Frontend e Backend com PHP, tenho bacharel em Ciência da Computação e conhecimentos avançados em HTML5, CSS3, Javascript, PHP, MYSQL, entre outros.</p>
+						<p>Sempre fui uma entusiasta da área de TI e desde que conheci a programação descubri que itnha uma afinidade muito grande e uma facilidade surpreendente, foi então que decidi seguir na carreira de desenvolvimento web, trabalhando e me divertindo.</p>
+						<p>Atualmente estou trabalhando na Agência Tática Web com desenvolvimento frontend e backend, mas não largo os estudos e minha curiosidade me levou a estudar aplicativos mobile multiplataformas com uma visão mais voltada à experiência do usuário.</p>
+						<div class="clear"></div>
+						<a class="anchor right" href="#About/Skills">Formação e Conhecimentos</a>
+					</div>
+
+					<canvas id="sineCanvas" width="1434" height="300"></canvas>
+				</div>
+				<div class="slide skills" data-anchor="Skills">
+					<div class="container">
+						<h3>Formação e Conhecimentos</h3>
+						<div class="formation">
+							<h4>Ciência da Computação<span> // 2014 - Centro Universitário de Barra Mansa</span></h4>
+							<h5>TCC: Sistema Web de Automação Residencial</h5>
+							<p>Utilizando Arduíno para controlar os componentes de uma residência através de uma interface web disponível para computadores, tablets e celulares com acesso à internet.</p>
+						</div>
+						<ul class="knowledge">
+							<li data-nivel="100%">HTML5 <span>100%</span></li>
+							<li data-nivel="100%">CSS3 <span>100%</span></li>
+							<li data-nivel="40%">SASS <span>40%</span></li>
+							<li data-nivel="100%">Bootstrap <span>100%</span></li>
+							<li data-nivel="100%">Responsive Design <span>100%</span></li>
+							<li data-nivel="60%">UI/UX <span>60%</span></li>
+							<li data-nivel="100%">CrossBrowser <span>100%</span></li>
+							<li data-nivel="80%">Javascript <span>80%</span></li>
+							<li data-nivel="100%">jQuery <span>100%</span></li>
+							<li data-nivel="40%">AngularJS <span>40%</span></li>
+							<li data-nivel="60%">Phonegap <span>60%</span></li>
+							<li data-nivel="60%">Ionic <span>60%</span></li>
+							<li data-nivel="40%">Bower / NPM <span>40%</span></li>
+							<li data-nivel="25%">Grunt / Gulp <span>25%</span></li>
+							<li data-nivel="60%">Git <span>60%</span></li>
+							<li data-nivel="40%">Node JS <span>40%</span></li>
+							<li data-nivel="25%">Mongo DB <span>25%</span></li>
+							<li data-nivel="40%">Firebase <span>40%</span></li>
+							<li data-nivel="80%">PHP <span>80%</span></li>
+							<li data-nivel="60%">Laravel <span>60%</span></li>
+							<li data-nivel="80%">MySql <span>80%</span></li>
+							<li data-nivel="60%">SQL Server <span>60%</span></li>
+							<li data-nivel="80%">Arduino <span>80%</span></li>
 						</ul>
-					</footer>
-				</article>
-				<footer class="footer">
-					<p>Inspiraçao: <a href="https://html5up.net/identity" target="_blank">HTML 5 UP - Identity</a></p>
-				</footer>
+						<div class="clear"></div>
+						<a class="anchor right" href="#About/Experiences">Experiências</a>
+					</div>
+				</div>
+				<div class="slide experience" data-anchor="Experiences">
+					<div class="container">
+						<h3>Experiências</h3>
+						<ul>
+							<li>
+								<h4>Desenvolvedora Web<span> // 09/2013 - atual</span></h4>
+								<h5>Tática Web</h5>
+								<p>Desenvolvimento de sites, lojas virtuais, sistemas e aplicativos web. Recorte e estruturação de layout com HTML5 e CSS3. Design responsivo. Desempenho e otimização de página para o google. Painel administrativo de conteúdo dos sites. Sistema web para imobiliárias. Programação completa desde o Front ao Back-end (em PHP).</p>
+							</li>
+							<li>
+								<h4>Estagiária de TI<span> // 02/2010 - 09/2013</span></h4>
+								<h5>Caixa Econômica Federal</h5>
+								<p>Suporte em TI aos usuários do escritório. Manutenção em sistemas internos para acompanhamento de dados de transações e serviços capturados através de webservice. Desenvolvimento e manutenção de site intranet.</p>
+							</li>
+							<div class="clear"></div>
+						</ul>
+						<a class="anchor down" href="#Portfolio">Portfolio</a>
+					</div>
+				</div>
+			</section>
+			<section class="section portfolio">
+				<div class="container">
+					<h3>Portfolio</h3>
+					<ul>
+						<li>
+							<img src="http://lorempixel.com/200/280/city">
+							<div class="desc">
+								<h4>Lorem ipsum dolor sit amet</h4>
+								<a href="#">sobre</a>
+								<a href="#">visite</a>
+							</div>
+						</li>
+						<li>
+							<img src="http://lorempixel.com/200/280/city">
+							<div class="desc">
+								<h4>Lorem ipsum dolor sit amet</h4>
+								<a href="#">sobre</a>
+								<a href="#">visite</a>
+							</div>
+						</li>
+						<li>
+							<img src="http://lorempixel.com/200/280/city">
+							<div class="desc">
+								<h4>Lorem ipsum dolor sit amet</h4>
+								<a href="#">sobre</a>
+								<a href="#">visite</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<a class="anchor down" href="#Contact">Contato</a>
+			</section>
+			<section class="section contato">
+				<div class="container">
+					<h3>Contato</h3>
+					<p>Que bom que você chegou até aqui! Gostou do que viu e quer conversar?<br>Sinta-se a vontade para entrar em contato comigo através das opções abaixo:</p>
+					<p class="email">mbomfim@live.com</p>
+					<p class="tel">(24) 99836-2957</p>
+					<p>Ou siga-me nas redes sociais:</p>
+					<ul>
+						<li><a class="facebook" href="#">facebook</a></li>
+						<li><a class="twitter" href="#">twitter</a></li>
+						<li><a class="linkedin" href="#">linkedin</a></li>
+						<li><a class="github" href="#">github</a></li>
+						<li><a class="codepen" href="#">codepen</a></li>
+					</ul>
+				</div>
 			</section>
 		</div>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
+		<script type="text/javascript" src="js/svg_wave.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
 	</body>
 </html>
