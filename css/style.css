@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import 'https://fonts.googleapis.com/css?family=Roboto:300';
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,700|Gloria+Hallelujah');
 
 /** RESET **/
 *{margin:0;padding:0;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
@@ -26,117 +26,379 @@ select::-ms-expand { display: none; }
 ::-moz-selection{background:#fff;color:#121212;}
 ::selection{background:#fff;color:#121212;}
 
-body {
-  background: #111429;
-}
-.container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.card {
-  width: 350px;
-  max-width: 94%;
-  display: block;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: 4px;
-  padding: 40px 10px;
-  text-align: center;
-  position: relative;
-}
-.card > .header > .avatar{
+.container{
   width: 100%;
-  height: auto;
-  position: relative;
-  display: block;
-}
-.card > .header > .avatar > img{
-  width: 165px;
-  height: 165px;
-  display: block;
-  border-radius: 50%;
+  max-width: 760px;
   margin: 0 auto;
-  border: 15px solid #fff;
-  position: relative;
-  z-index: 1; 
 }
-.card > .header > .avatar:before{
-  content: "";
-  width: calc(100% + 20px);
-  height: 1px;
-  background: #111429;
+a.anchor{
   position: absolute;
-  left: -10px;
-  top: 50%;
-}
-.card > .header > h1 {
-  font-size: 23px;
+  font-size: 12px;
   text-transform: uppercase;
   color: #111429;
-  position: relative;
-  margin: 20px 0px;
 }
-.card > .header > h2 {
-  font-size: 16px;
-  color: #111429;
-  text-align: center;
-}
-.card > .footer > ul{
-  width: 100%; 
-  text-align: center;
-  margin-top: 30px;
-}
-.card > .footer > ul > li{
-  display: inline-block;
-  padding: 0 5px;
-}
-.card > .footer > ul > li > a{
-  width: 64px;
-  height: 64px;
+a.anchor:after{
+  content: '';
+  width: 28px;
+  height: 28px;
   display: block;
-  line-height: 64px;
-  text-indent: 64px;
-  white-space: nowrap;
-  overflow: hidden;
-  opacity: 0.6;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #111429;
 }
-.card > .footer > ul > li > a:hover{
-  opacity: 1;
+a.anchor.down{
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%,0);
 }
-.card > .footer > ul > li > a.email{
-  background: url(../images/1476050679_mail.png);
-  /* https://www.iconfinder.com/icons/1164530/email_mail_icon#size=64 */
+a.anchor.down:after{
+  margin: 0 auto;
+  -webkit-mask: url('../images/arrow_down.svg') no-repeat 50% 50%;
+  mask: url('../images/arrow_down.svg') no-repeat 50% 50%;
 }
-.card > .footer > ul > li > a.skype{
-  background: url(../images/1476050663_skype.png);
-  /* https://www.iconfinder.com/icons/1164526/skype_icon#size=64 */
+a.anchor.left{
+  top: 50%;
+  left: 20px;
+  transform: translate(0,-50%);
 }
-.card > .footer > ul > li > a.linkedin{
-  background: url(../images/1476050642_linkedin.png);
-  /* https://www.iconfinder.com/icons/1164533/linkedin_icon#size=64 */
+a.anchor.left:after{
+  margin: 0 10px;
+  float: left;
+  -webkit-mask: url('../images/arrow_left.svg') no-repeat 50% 50%;
+  mask: url('../images/arrow_left.svg') no-repeat 50% 50%;
 }
-.container > .footer {
-  width: 100%;
-  height: 30px;
-  background: #000318;
-  position: fixed;
-  left: 0px;
-  bottom: 0px;;
+a.anchor.right{
+  top: 50%;
+  right: 20px;
+  transform: translate(0,-50%);
 }
-.container > .footer p {
-  font-size: 11px;
-  line-height: 30px;
-  color: #fff;
+a.anchor.right:after{
+  margin: 0 10px;
+  float: right;
+  -webkit-mask: url('../images/arrow_right.svg') no-repeat 50% 50%;
+  mask: url('../images/arrow_right.svg') no-repeat 50% 50%;
+}
+
+/** HOME **/
+  .home{
+    background: #111429 url('../images/bg.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  .home .avatar{
+    display: block;
+    float: left;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 5px solid #fff;
+    box-shadow: 2px 2px 6px rgba(0,0,5,0.4);
+  }
+  .home .hello{
+    display: inline-block;
+    background: #C2185B;
+    color: #fff;
+    font-size: 18px;
+    padding: 6px 10px;
+    position: relative;
+    margin: 15px 0px 0px -10px;
+  }
+  .home .hello:after{
+    content:'';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: #C2185B transparent transparent transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+  }
+  .home h1{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 100;
+    line-height: 50px;
+  }
+  .home h1 span{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 40px;
+  }
+  .home h2{
+    color: #fff;
+    font-size: 24px;
+  }
+  .home a.anchor{
+    color: #fff;
+  }
+  .home a.anchor.down:after{
+    background-color: #fff;
+  }
+
+/** ABOUT **/
+  .about .photo{
+    width: 320px;
+    height: 480px;
+    display: block;
+    float: left;
+    margin-right: 30px;
+    border-radius: 8px;
+    background-color: #0097A7;
+  }
+  .about .photo img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,5,0.4);
+    opacity: 0.8;
+  }
+  .about .photo:hover img{
+    opacity: 1;
+  }
+  h3{
+    font-family: 'Gloria Hallelujah', cursive;;
+    font-size: 30px;
+    color: #111429;
+  }
+  h3:before{
+    content: '<';
+    color: #C2185B;
+    margin-right: 10px;
+  }
+  h3:after{
+    content: '/>';
+    color: #C2185B;
+    margin-left: 10px;
+  }
+  p{
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 16px;
+  }
+  canvas {
+  	width: 100%;
+  	height: 300px;
+  	position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+  .about .container{
+    position: relative;
+  }
+  .about .anchor.right{
+    right: 0px;
+    top: inherit;
+    line-height: 28px;
+  }
+
+/** SKILLS **/
+  .skills .fp-tableCell{
+    position: relative;
+  }
+  .skills h3{
+    text-align: center;
+  }
+  .skills .formation{
+    display: inline-block;
+    border-radius: 8px;
+    border: 5px solid #0097A7;
+    padding: 15px;
+    margin: 20px 0px;
+  }
+  .skills .formation h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #C2185B;
+  }
+  .skills .formation h4 span{
+    font-size: 16px;
+  }
+  .skills .formation h5{
+    font-size: 16px;
+    font-weight: 700;
+    color: #C2185B;
+    margin-top: 10px;
+  }
+  .skills .formation h5:before{
+    content: ' • ';
+  }
+  .skills .formation p{
+    margin-bottom: 0px;
+  }
+  .skills .knowledge{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .skills .knowledge li{
+    width: 33.3333%;
+    height: auto;
+    display: block;
+    float: left;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+    line-height: 20px;
+  }
+  .skills .knowledge li:before{
+    content: '';
+    width: calc(100% - 20px);
+    height: 1px;
+    display: block;
+    background: #111429;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+  .skills .knowledge li:after{
+    content: '';
+    display: inline-block;
+    height: 5px;
+    background: #111429;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+  .skills .knowledge li[data-nivel="100%"]:after{
+    width: calc(100% - 20px);
+  }
+  .skills .knowledge li[data-nivel="80%"]:after{
+    width: calc(80% - 20px);
+  }
+  .skills .knowledge li[data-nivel="60%"]:after{
+    width: calc(60% - 20px);
+  }
+  .skills .knowledge li[data-nivel="40%"]:after{
+    width: calc(40% - 20px);
+  }
+  .skills .knowledge li[data-nivel="25%"]:after{
+    width: calc(25% - 20px);
+  }
+  .skills .knowledge li span{
+    display: inline-block;
+    background: #C2185B;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 4px;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+  }
+  .skills .container{
+    position: relative;
+  }
+  .skills .anchor.right{
+    right: 0px;
+    top: inherit;
+    line-height: 28px;
+  }
+
+/** EXPERIENCES **/
+.experience h3{
   text-align: center;
-  opacity: 0.3;
 }
-.container > .footer:hover p {
-  opacity: 1;
-}
-.container > .footer p > a {
-  text-decoration: underline;
-}
+  .experience ul{
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+  .experience ul li{
+    width: calc(100% - 40px);
+    height: auto;
+    display: block;
+    background: #C2185B;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 20px;
+    position: relative;
+    margin-top: 30px
+  }
+  .experience ul li:nth-child(odd){
+    float: left;
+    margin-right: 50%;
+  }
+  .experience ul li:nth-child(even){
+    float: right;
+  }
+  .experience ul li:after{
+    content:'';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #C2185B transparent transparent transparent;
+    position: absolute;
+    top: 20px;
+    padding: 20px;
+    z-index: -1;
+  }
+  .experience ul li:before{
+    content:'';
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: #fff;
+    border: 3px solid #111429;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+  }
+  .experience ul li:nth-child(odd):after{
+    border-width: 30px 25px 0 0;
+    right: -25px;
+  }
+  .experience ul li:nth-child(even):after{
+    border-width: 30px 0 0 25px;
+    left: -25px;
+  }
+  .experience ul li:nth-child(odd):before{
+    right: -48px;
+  }
+  .experience ul li:nth-child(even):before{
+    left: -48px;
+  }
+  .experience h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .experience h4 span{
+    font-size: 16px;
+  }
+  .experience h5{
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 10px;
+  }
+  .experience .fp-tableCell{
+    position: relative;
+  }
+
+  /** PORTFOLIO **/
+    .portfolio h3{
+      text-align: center;
+    }
+    .portfolio ul{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .portfolio ul li{
+      width: calc(33.3333% - 20px);
+      height: auto;
+      display: block;
+      float: left;
+      border-radius: 8px;
+      border: 5px solid #0097A7;
+      margin: 20px 10px;
+    }
+    .portfolio ul li img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .portfolio ul li .desc{
+      padding: 15px;
+    }
