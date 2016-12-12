@@ -78,6 +78,40 @@ a.anchor.right:after{
   -webkit-mask: url('../images/arrow_right.svg') no-repeat 50% 50%;
   mask: url('../images/arrow_right.svg') no-repeat 50% 50%;
 }
+.fp-section{
+  padding-top: 50px;
+}
+
+/** HEADER **/
+  .header{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    background: rgba(51,51,102,0.8);
+    padding: 10px 20px;
+    z-index: 1;
+  }
+  .header a.logo{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+    color: #fff;
+  }
+  .header ul{
+    display: block;
+    float: right;
+  }
+  .header ul li{
+    display: inline-block;
+  }
+  .header ul li a{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 12px 15px;
+    display: block;
+  }
 
 /** HOME **/
   .home{
