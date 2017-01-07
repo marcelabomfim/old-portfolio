@@ -215,7 +215,7 @@
 			        	<h4 class="title">Idiomas</h4>
 	        			<div class="row">
 	        				<div class="col-md-12 col-sm-4">
-	        					<div class="row">
+	        					<div class="row language">
 					        		<div class="col-md-6"><p>Português</p></div>
 					        		<div class="col-md-6">
 					        			<i class="fa fa-star"></i>
@@ -229,7 +229,7 @@
 				        	</div>
 
 			        		<div class="col-md-12 col-sm-4">
-	        					<div class="row">
+	        					<div class="row language">
 					        		<div class="col-md-6"><p>Inglês, Conversação</p></div>
 					        		<div class="col-md-6">
 					        			<i class="fa fa-star"></i>
@@ -243,7 +243,7 @@
 					        </div>
 
 			        		<div class="col-md-12 col-sm-4">
-	        					<div class="row">
+	        					<div class="row language">
 					        		<div class="col-md-6"><p>Inglês, Leitura</p></div>
 					        		<div class="col-md-6">
 					        			<i class="fa fa-star"></i>
@@ -443,6 +443,24 @@
 	      		return false;
 	      	});
 
+			$('.navbar-toggle').click(function(){
+				if(!$('.navbar-collapse').hasClass('in')){
+					$('.navbar-color-on-scroll').removeClass('navbar-transparent');
+				} else if($(document).scrollTop() <= 260 ) {
+					$('.navbar-color-on-scroll').addClass('navbar-transparent');
+				}
+			});
+
 		});
+
+		$(document).click(function (e) {
+		    e.stopPropagation();
+		    var container = $(".navbar-collapse");
+
+		    //check if the clicked area is dropDown or not
+		    if (container.hasClass('in') && container.has(e.target).length === 0) {
+		        $('.navbar-toggle').trigger('click');
+		    }
+		})
 	</script>
 </html>

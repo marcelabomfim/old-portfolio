@@ -10,7 +10,7 @@
 @media (max-width: 767px){
     .index-page .wrapper > .header {
         height: calc(100vh - 75px);
-    }   
+    }
     .section {
         padding: 20px 0;
     }
@@ -26,6 +26,10 @@ h2.title span.parenteses{
     h2.title span{
         display: none;
     }
+}
+
+.description{
+    color: #3C4858;
 }
 
 /** NAV **/
@@ -210,7 +214,7 @@ h2.title span.parenteses{
     @media (max-width: 767px){
         .portfolio-item h3{
             margin-top: 15px;
-        }   
+        }
     }
 
 /** SKILLS **/
@@ -331,7 +335,13 @@ h2.title span.parenteses{
     @media (max-width: 767px){
         .skill-cat:first-child{
             margin-top: 0px;
-        }   
+        }
+        .language{
+            margin-bottom: 20px;
+        }
+        .language p{
+            margin-bottom: 5px;
+        }
     }
 
 
@@ -339,7 +349,7 @@ h2.title span.parenteses{
     .experience{
         margin-top: 60px;
     }
-    .experience h3{     
+    .experience h3{
         margin-bottom: 0px;
     }
     @media (max-width: 767px){
@@ -363,7 +373,7 @@ h2.title span.parenteses{
         -moz-animation: blink 0.7s infinite;
         animation: blink 0.7s infinite;
     }
-    
+
     @keyframes blink {
         0% {
             opacity: 1;
@@ -375,7 +385,7 @@ h2.title span.parenteses{
             opacity: 1;
         }
     }
-    
+
     @-webkit-keyframes blink {
         0% {
             opacity: 1;
@@ -387,7 +397,7 @@ h2.title span.parenteses{
             opacity: 1;
         }
     }
-    
+
     @-moz-keyframes blink {
         0% {
             opacity: 1;
