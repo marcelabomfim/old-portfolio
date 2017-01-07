@@ -368,6 +368,9 @@ h2.title span.parenteses{
 
 /** TYPED **/
     .ityped-cursor {
+        opacity: 0;
+    }
+    .ityped-cursor:not(.finished){
         opacity: 1;
         -webkit-animation: blink 0.7s infinite;
         -moz-animation: blink 0.7s infinite;

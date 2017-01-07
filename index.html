@@ -412,7 +412,7 @@
 	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
 	<script src="assets/js/material-kit.js" type="text/javascript"></script>
 
-	<script src="assets/js/ityped.js"></script>
+	<script src="assets/js/ityped.min.js"></script>
 
 	<script type="text/javascript">
 
@@ -428,9 +428,12 @@
 
 			ityped.init('#lets_develop', {
 	        	strings: ['sites', 'sistemas', 'aplicativos', 'soluções para web'],
-	        	typeSpeed: 100,
-	        	pause: 1000,
-	        	loop: true
+	        	typeSpeed: 150,
+	        	pause: 1500,
+				backDelay: 1000,
+				onFinished: function(){
+					$('.ityped-cursor').addClass('finished');
+				}
 	      	});
 
 	      	$('.navbar-menu li a').click(function(){
