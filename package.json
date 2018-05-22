@@ -12,7 +12,8 @@
     "lint": "eslint --ext .js --ext .jsx .",
     "lint:fix": "npm run prettify && eslint '{!(.next*|*static*|node_modules*), }/**/*.js' --fix",
     "prettify": "prettier --config .prettierrc --write '{!(.next*|*static*|node_modules*), }/**/*.{js,md}' '*.md'",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "create:component": "node tools/create.js --component"
   },
   "lint-staged": {
     "**/*.js": [
@@ -34,6 +35,8 @@
     "styled-components": "^3.2.6"
   },
   "devDependencies": {
+    "babel-plugin-module-resolver": "^3.1.1",
+    "commander": "^2.15.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",

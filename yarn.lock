@@ -995,6 +995,16 @@ babel-loader@8.0.0-beta.2:
     loader-utils "^1.0.2"
     mkdirp "^0.5.1"
 
+babel-plugin-module-resolver@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-3.1.1.tgz#881cf67e3d4b8400d5eaaefc1be44d2dc1fe404f"
+  dependencies:
+    find-babel-config "^1.1.0"
+    glob "^7.1.2"
+    pkg-up "^2.0.0"
+    reselect "^3.0.1"
+    resolve "^1.4.0"
+
 babel-plugin-react-require@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-react-require/-/babel-plugin-react-require-3.0.0.tgz#2e4e7b4496b93a654a1c80042276de4e4eeb20e3"
@@ -1430,7 +1440,7 @@ combined-stream@1.0.6, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.11.0, commander@^2.14.1, commander@^2.9.0:
+commander@^2.11.0, commander@^2.14.1, commander@^2.15.1, commander@^2.9.0:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
 
@@ -2357,6 +2367,13 @@ fill-range@^4.0.0:
     is-number "^3.0.0"
     repeat-string "^1.6.1"
     to-regex-range "^2.1.0"
+
+find-babel-config@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/find-babel-config/-/find-babel-config-1.1.0.tgz#acc01043a6749fec34429be6b64f542ebb5d6355"
+  dependencies:
+    json5 "^0.5.1"
+    path-exists "^3.0.0"
 
 find-cache-dir@^1.0.0:
   version "1.0.0"
@@ -4263,6 +4280,12 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
+pkg-up@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-2.0.0.tgz#c819ac728059a461cab1c3889a2be3c49a004d7f"
+  dependencies:
+    find-up "^2.1.0"
+
 please-upgrade-node@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/please-upgrade-node/-/please-upgrade-node-3.0.2.tgz#7b9eaeca35aa4a43d6ebdfd10616c042f9a83acc"
@@ -4679,6 +4702,10 @@ require-uncached@^1.0.3:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
 
+reselect@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-3.0.1.tgz#efdaa98ea7451324d092b2b2163a6a1d7a9a2147"
+
 resolve-from@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-1.0.1.tgz#26cbfe935d1aeeeabb29bc3fe5aeb01e93d44226"
@@ -4697,7 +4724,7 @@ resolve@1.5.0:
   dependencies:
     path-parse "^1.0.5"
 
-resolve@^1.3.2, resolve@^1.5.0, resolve@^1.6.0:
+resolve@^1.3.2, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.6.0:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.7.1.tgz#aadd656374fd298aee895bc026b8297418677fd3"
   dependencies:
