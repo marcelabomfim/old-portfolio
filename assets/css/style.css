@@ -138,6 +138,11 @@ h2.title span.parenteses{
     .profile .description{
         max-width: 600px;
         margin: 0 auto;
+        font-size: 17px;
+        line-height: 25px;
+    }
+    p {
+        margin: 0 0 15px;
     }
     @media (max-width: 991px){
         .profile .avatar{
@@ -218,6 +223,18 @@ h2.title span.parenteses{
     }
 
 /** SKILLS **/
+    .skill-list {
+        padding: 0;
+    }
+
+    .skill-list li {
+        list-style-type: none;
+        padding: 6px 10px;
+        font-weight: bold;
+        margin: 4px;
+        cursor: default;
+    }
+
     .skill-icon {
         background-image: url(../img/spritesheet_skill-icon.png);
         background-repeat: no-repeat;
@@ -333,9 +350,6 @@ h2.title span.parenteses{
         }
     }
     @media (max-width: 767px){
-        .skill-cat:first-child{
-            margin-top: 0px;
-        }
         .language{
             margin-bottom: 20px;
         }
